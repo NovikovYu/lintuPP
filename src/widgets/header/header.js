@@ -4,8 +4,6 @@ import styles from "./header.module.scss";
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
-import DensityMediumIcon from "@mui/icons-material/DensityMedium";
-import NorthIcon from "@mui/icons-material/North";
 import { useTranslation } from "react-i18next";
 
 let cx = classNames.bind(styles);
@@ -63,7 +61,7 @@ const Header = () => {
         className={styles["menu-switcher"]}
         onClick={() => setIsMenuClose(!isMenuClose)}
       >
-        {isMenuClose ? <DensityMediumIcon /> : <NorthIcon />}
+        {isMenuClose ? 'M' : 'X'}
       </button>
 
       <nav className={navClassName}>
