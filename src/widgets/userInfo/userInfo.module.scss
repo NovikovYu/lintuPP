@@ -1,0 +1,38 @@
+.userInfo {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    text-align: center;
+
+    &__title {
+        display: block;
+        margin-bottom: 16px;
+        text-align: center;
+        font-size: 28px;
+        line-height: 40px;
+        font-weight: 600;
+        color: #18204A;
+
+        @media (min-width: 765px) {
+            margin-bottom: 20px;
+            font-size: 56px;
+            line-height: 72px;   
+        }
+    }
+
+    &__text {
+        margin-bottom: 16px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #586691;
+
+        @media (min-width: 765px) {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 32px;   
+        }
+    }
+}

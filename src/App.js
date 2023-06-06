@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./widgets/header/header";
+import Hero from "./widgets/hero/hero";
+import RegistrationForm from "./widgets/registrationForm/registrationForm";
+import UserInfo from "./widgets/userInfo/userInfo";
+import Footer from "./widgets/footer/footer";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import E404Page from "./widgets/e404/e404";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router className={"app"}>
+      <Header />
+      <Routes>
+        <Route path="/userInfo" element={<UserInfo />} />
+        <Route
+          path="/"
+          element={
+              <Hero />
+          }
+        />
+        <Route path="/*" element={<E404Page />} />
+
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
